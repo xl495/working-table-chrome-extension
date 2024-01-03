@@ -9,13 +9,20 @@
     "128": "icon/128.png"
   },
   "{{chrome}}.action": {
-    "default_popup": "src/popup.html"
+    "default_popup": "src/popup.html",
+    "options_page": "src/options.html"
   },
   "{{firefox}}.browser_action": {
     "default_popup": "src/popup.html"
   },
+  "chrome_url_overrides" : {
+    "newtab": "src/index.html"
+  },
+  "permissions": ["sidePanel"],
   "background": {
     "{{chrome}}.service_worker": "src/background.ts",
-    "{{firefox}}.scripts": ["src/background.ts"]
+    "{{firefox}}.scripts": [
+      "src/background.ts"
+    ]
   }
 }
